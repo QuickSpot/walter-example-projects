@@ -1,0 +1,20 @@
+/*
+ * Copyright (c) 2024 DPTechnics bv
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/ {
+	power_3v3_switch: power_3v3_switch {
+		compatible = "power-switch";
+		gpios = <&gpio0 0 GPIO_ACTIVE_LOW>;
+	};
+};
+
+&i2c0 {
+    status = "okay";
+	dht20: dht20@38 {
+		compatible = "aosong,dht20";
+		reg = <0x38>;
+	};
+};

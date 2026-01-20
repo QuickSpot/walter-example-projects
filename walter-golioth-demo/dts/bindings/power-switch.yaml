@@ -1,0 +1,11 @@
+
+description: GPIO pin to switch a DC power output on or off
+
+compatible: "power-switch"
+
+properties:
+  gpios:
+    type: phandle-array
+    required: true
+    description: |
+      The GPIO pin connected to the gate of the MOSFET.

@@ -1,0 +1,30 @@
+# Chat script used to set up a PPP connection via Walter over 
+# a simple serial connection.
+
+ABORT		BUSY
+ABORT		VOICE
+ABORT		"NO CARRIER"
+ABORT		"NO DIALTONE"
+ABORT		"NO DIAL TONE"
+ABORT		"NO ANSWER"
+ABORT		"DELAYED"
+ABORT		"ERROR"
+
+TIMEOUT		30
+""		AT
+OK		AT+CFUN=0
+
+TIMEOUT		60
+""		AT
+
+TIMEOUT		12
+OK		AT+CGDCONT=1,"IP","\T","",0,0
+OK		AT+CFUN=1
+
+# Wait for the modem to register on the network
+TIMEOUT 300
+"+CEREG: 5"	ATD*99# 
+
+TIMEOUT		22
+CONNECT		""
+

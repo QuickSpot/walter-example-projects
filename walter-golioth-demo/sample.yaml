@@ -1,0 +1,11 @@
+# Copyright (c) 2024 DPTechnics bv
+# SPDX-License-Identifier: Apache-2.0
+
+sample:
+  description: Walter Golioth Demo
+  name: walter_golioth_demo
+common:
+  harness: net
+  platform_allow:
+    - walter/esp32s3/procpu
+  tags: golioth

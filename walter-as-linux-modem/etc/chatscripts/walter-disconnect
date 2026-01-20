@@ -1,0 +1,16 @@
+# Chat script used to close a PPP connection via Walter over 
+# a simple serial connection.
+
+ABORT BUSY
+ABORT VOICE
+ABORT "NO DIALTONE"
+ABORT "NO CARRIER"
+ABORT ERROR
+
+""      "+++"
+TIMEOUT 5
+OK      ATH
+TIMEOUT 10
+OK      AT+CFUN=0
+TIMEOUT 5
+OK      ""

@@ -1,0 +1,24 @@
+# Copyright (c) 2024 DPTechnics bv
+# SPDX-License-Identifier: Apache-2.0
+
+manifest:
+  version: 0.8
+
+  projects:
+    - name: golioth
+      path: modules/lib/golioth-firmware-sdk
+      revision: v0.15.0 
+      url: https://github.com/golioth/golioth-firmware-sdk.git
+      west-commands: scripts/west-commands.yml
+      submodules: true
+      import:
+        file: west-zephyr.yml
+        path-prefix: deps
+        name-allowlist:
+          - zephyr
+          - hal_espressif
+          - mbedtls
+          - zcbor
+  
+  self:
+    path: app

@@ -1,0 +1,26 @@
+/dev/serial0
+921600
+local
+nocrtscts
+
+connect "/usr/sbin/chat -v -f /etc/chatscripts/walter -T soracom.io"
+disconnect "/usr/sbin/chat -v -f /etc/chatscripts/walter-disconnect"
+
+noauth
+noipdefault
+ipcp-accept-remote
+ipcp-accept-local
+usepeerdns
+
+defaultroute
+replacedefaultroute
+
+lcp-echo-interval 30
+lcp-echo-failure 5
+mtu 512
+mru 512
+persist
+holdoff 5
+maxfail 0
+
+debug

@@ -1,0 +1,12 @@
+auth:
+    auto_ztp: true
+    type_id: <enter your 8 character type id here>
+connection:
+    port: 7681
+    ssl: false
+ota:
+    pubkey: ""
+    cur_version: 0
+    auto_exec: false
+    working_directory: /tmp
+offline_destination_list: []
