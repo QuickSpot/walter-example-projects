@@ -128,7 +128,7 @@ possible by registering on [BlueCherry.io](https://bluecherry.io).
 
 As soon as you have your *type id* at hand you can go ahead and install the 
 following applications and files on your host:
- - `usr/sbin/bluecherry-client` --> `/usr/sbin/bluecherry-client`
+ - `usr/sbin/bluecherry-client` for arm32 or `usr/sbin/bluecherry-client_arm64` for arm64 or  --> `/usr/sbin/bluecherry-client`
  - `usr/sbin/ttyd` --> `/usr/sbin/ttyd`
  - `etc/ttyd/index.html` --> `/etc/ttyd/index.html`
  - `etc/bluecherry/config.yaml` --> `/etc/bluecherry/config.yaml`
