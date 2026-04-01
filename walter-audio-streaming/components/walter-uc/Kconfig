@@ -1,0 +1,11 @@
+menu "Walter-UC"
+    config ESP_MODEM_URC_HANDLER_DEFAULT
+        bool
+        default y
+        select ESP_MODEM_URC_HANDLER
+
+    config ESP_LWIP_PPP_HANDLER_DEFAULT
+        bool
+        default y
+        select LWIP_PPP_SUPPORT
+endmenu

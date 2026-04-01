@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find . -type f -name \".gitignore\" -exec echo \"=== {} ===\" \\\\; -exec cat {} \\\\;)",
+      "Bash(find . -type f \\\\\\( -name \"*.json\" -o -name \"*.yaml\" -o -name \"*.yml\" \\\\\\) ! -path \"*/node_modules/*\" ! -path \"*/.git/*\" ! -path \"*/build/*\" ! -path \"*/managed_components/*\" -exec grep -l \"password\\\\|secret\\\\|token\\\\|key\\\\|credential\" {} \\\\;)"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+# Arduino-ESP32 requires FreeRTOS running at 1000 Hz
+CONFIG_FREERTOS_HZ=1000
+
+# Enough main-task stack for the Arduino runtime + Audio library
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=16384
+
+# Walter has QSPI (quad SPI) PSRAM - NOT OPI/octal
+CONFIG_SPIRAM=y
+CONFIG_SPIRAM_MODE_QUAD=y
+CONFIG_SPIRAM_SPEED_80M=y
+
+# Enable mbedTLS PSK modes so Arduino's ssl_client.cpp compiles its implementation
+# (ssl_client.cpp wraps all functions inside #else of MBEDTLS_KEY_EXCHANGE_SOME_PSK_ENABLED)
+CONFIG_MBEDTLS_PSK_MODES=y
+CONFIG_MBEDTLS_KEY_EXCHANGE_PSK=y
+
+# Flash size: Walter ESP32-S3 has 4MB flash
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+CONFIG_ESPTOOLPY_FLASHSIZE="4MB"
+
+# Custom partition table - 3MB factory app for large Arduino+Audio binary
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"

@@ -1,0 +1,6 @@
+version: "0.1.0"
+name: "walter-uc"
+dependencies:
+  espressif/esp_modem:
+    version: ">=1.0.0"
+description: "Walter Unified Communications Library"
