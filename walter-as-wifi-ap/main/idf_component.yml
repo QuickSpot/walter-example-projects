@@ -1,0 +1,4 @@
+dependencies:
+  idf: ">=5.0.0"
+  espressif/esp_modem:
+    version: "^2"
